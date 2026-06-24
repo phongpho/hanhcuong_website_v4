@@ -103,7 +103,7 @@
         <div class="container">
 
             <div class="content-side">
-                <h2>Hình ảnh hoạt động thực tế tại trang trại</h2>
+                <h2>Xem thêm tại kênh Youtube chính thức của chúng tôi</h2>
             </div>
 
             <div class="video-wrapper-scroll">
@@ -154,6 +154,7 @@
     </section>
 
     <?php include 'includes/footer.php'; ?>
+    <script src="assets/js/script.js"></script>
     <script src="assets/js/video-scroll.js"></script>
 </body>
 

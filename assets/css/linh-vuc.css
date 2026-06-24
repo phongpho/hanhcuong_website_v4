@@ -132,3 +132,51 @@
 .scroll-btn:hover {
     background: var(--color-primary-hover);
 }
+@media screen and (max-width: 768px) {
+    /* 1. Xử lý phần Iframe Video ở section đầu (tránh bị xẹp mất hình) */
+    .img-side .video-wrapper {
+        height: 240px; 
+        border-radius: 12px;
+        overflow: hidden;
+        margin-top: 16px;
+    }
+
+    /* 2. Cột "Các giống bò hiện tại" từ ngang sang dọc */
+    .content-grid {
+        display: block; 
+    }
+
+    .livestock-item {
+        width: 100%;
+        margin-bottom: 40px; /* Tạo khoảng cách giữa bò thịt và bò sữa */
+    }
+    .livestock-item:last-child {
+        margin-bottom: 0;
+    }
+    .livestock-img {
+        max-height: 250px; /* Thu nhỏ ảnh lại một chút cho cân đối */
+        margin-bottom: 16px;
+    }
+
+    /* 3. Phần Slider Video ngang */
+    /* Ẩn 2 nút mũi tên vì trên mobile bị tràn viền (off-screen) 
+       và người dùng ưu tiên thao tác vuốt (swipe) tự nhiên hơn */
+    .scroll-btn {
+        display: none;
+    }
+
+    .video-scroll {
+        padding: 10px 16px; /* Giảm padding để video to rõ hơn */
+        gap: 16px;
+    }
+
+    .video-item {
+        /* Đặt kích thước 85% để lộ ra một phần của video tiếp theo, 
+           tạo hiệu ứng thị giác báo hiệu cho người dùng vuốt sang ngang */
+        flex: 0 0 85%;
+    }
+
+    .video-item iframe {
+        height: 190px; /* Thu nhỏ chiều cao video list lại đôi chút cho vừa màn hình */
+    }
+}

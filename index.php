@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
     <link rel="stylesheet" href="assets/css/global.css">
     <link rel="stylesheet" href="assets/css/index.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 </head>
 
 <body>
@@ -32,7 +33,7 @@
     <!-- giới thiệu sơ lược -->
     <section class="section">
         <div class="container" id="flexiable">
-            <div class="img-side">
+            <div class="img-side" data-aos="fade-up">
                 <img src="assets/images/tam-nhin-chien-luoc.jpg">
             </div>
 
@@ -71,7 +72,7 @@
     <section class="section data">
         <div class="container cards">
 
-            <div class="card feature-card">
+            <div class="card feature-card" >
                 <h3>600 Con</h3>
                 <h4>Bò giống và bò thịt</h4>
                 <p>Bò giống chất lượng cao, đáp ứng nhu cầu thị trường ổn định.</p>
@@ -134,30 +135,30 @@
 
             </div>
 
-            <div class="activity-cards">
+            <div class="activity-cards" >
 
-                <div class="activity-card">
+                <div class="activity-card" data-aos="fade-up" data-aos-delay="100">
                     <div class="activity-img">
                         <img src="assets/images/chan-nuoi-bo.jpg" alt="Xuất khẩu bò">
                     </div>
                     <h3>XUẤT KHẨU LÔ BÒ THỊT CHẤT LƯỢNG CAO SANG ĐÔN...</h3>
                 </div>
 
-                <div class="activity-card">
+                <div class="activity-card" data-aos="fade-up" data-aos-delay="200">
                     <div class="activity-img">
                         <img src="assets/images/chan-nuoi-de.jpg" alt="Trang trại dê An Giang">
                     </div>
                     <h3>MÔ HÌNH TRANG TRẠI DÊ ĐẠT CHUẨN QUỐC TẾ TẠI A...</h3>
                 </div>
 
-                <div class="activity-card">
+                <div class="activity-card" data-aos="fade-up" data-aos-delay="300">
                     <div class="activity-img">
                         <img src="assets/images/chan-nuoi-ca-tra.jpg" alt="Thu hoạch cá tra">
                     </div>
                     <h3>QUY TRÌNH THU HOẠCH CÁ TRA XUẤT KHẨU KHÉP KÍ...</h3>
                 </div>
 
-                <div class="activity-card">
+                <div class="activity-card" data-aos="fade-up" data-aos-delay="400">
                     <div class="activity-img">
                         <img src="assets/images/chan-nuoi-bo.jpg" alt="Đối tác Đông Nam Á">
                     </div>
@@ -171,7 +172,7 @@
 
     <?php include 'includes/footer.php'; ?>
 
-
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script src="assets/js/script.js"></script>
 </body>
 

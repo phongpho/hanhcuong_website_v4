@@ -44,6 +44,21 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     });
 
+
+    window.addEventListener("scroll", function() {
+        if (navMenu && navMenu.classList.contains("active")) {
+            navMenu.classList.remove("active");
+        }
+    });
+
+    if (typeof AOS !== 'undefined') {
+        AOS.init({
+            duration: 1000, // Tốc độ 1 giây
+            once: true,     // Cuộn xuống hiện 1 lần (đổi thành false nếu muốn cuộn lên/xuống liên tục)
+            offset: 120,
+            easing: 'ease-out'
+        });
+    } 
     
     
 });
