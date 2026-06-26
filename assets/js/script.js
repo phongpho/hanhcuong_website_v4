@@ -3,6 +3,15 @@ document.addEventListener("DOMContentLoaded", function () {
     const menuToggle = document.querySelector(".menu-toggle");
     const navMenu = document.querySelector(".nav-menu");
 
+    function closeMobileNav() {
+        if (navMenu) {
+            navMenu.classList.remove("active");
+        }
+        document.querySelectorAll(".nav-item.dropdown-open").forEach(function (item) {
+            item.classList.remove("dropdown-open");
+        });
+    }
+
     if (menuToggle && navMenu) {
         // Bấm vào nút 3 gạch để bật/tắt menu
         menuToggle.addEventListener("click", function (e) {
@@ -16,10 +25,29 @@ document.addEventListener("DOMContentLoaded", function () {
             if (navMenu.classList.contains("active") && 
                 !navMenu.contains(e.target) && 
                 !menuToggle.contains(e.target)) {
-                navMenu.classList.remove("active");
+                closeMobileNav();
             }
         });
     }
+
+    // Dropdown "Lĩnh vực" trên mobile (tap để mở/đóng submenu)
+    document.querySelectorAll(".nav-item.dropdown > a").forEach(function (link) {
+        link.addEventListener("click", function (e) {
+            if (window.innerWidth > 768) return;
+
+            e.preventDefault();
+            var parent = link.parentElement;
+            var isOpen = parent.classList.contains("dropdown-open");
+
+            document.querySelectorAll(".nav-item.dropdown-open").forEach(function (item) {
+                item.classList.remove("dropdown-open");
+            });
+
+            if (!isOpen) {
+                parent.classList.add("dropdown-open");
+            }
+        });
+    });
 
     // --- 2. XỬ LÝ TAB LĨNH VỰC ---
     const fieldNodes = document.querySelectorAll(".fields-node");
@@ -47,7 +75,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     window.addEventListener("scroll", function() {
         if (navMenu && navMenu.classList.contains("active")) {
-            navMenu.classList.remove("active");
+            closeMobileNav();
         }
     });
 
