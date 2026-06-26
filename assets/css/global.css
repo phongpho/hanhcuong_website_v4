@@ -566,15 +566,15 @@ p{
 }
 
 @media screen and (max-width: 768px) {
-    .top-bar-left span:nth-child(3),
+    .top-bar-left {
+        display: none;
+    }
     .follow-label,
     .top-social {
         display: none;
     }
-
-    .top-bar-left {
-        width: 100%;
-        justify-content: center;
+    .top-bar-inner {
+        justify-content: flex-end;
     }
 
     .btn-contact {
@@ -630,8 +630,6 @@ p{
     }
 
     .nav-item:hover .dropdown-menu {
-        opacity: 0;
-        visibility: hidden;
         transform: none;
     }
 
