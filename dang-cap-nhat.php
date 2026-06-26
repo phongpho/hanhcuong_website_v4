@@ -77,6 +77,7 @@
                 margin: auto;
                 line-height: 1.8;
                 color: rgba(255, 255, 255, .75);
+                text-align: center;
             }
 
             .updating-btn {
@@ -118,9 +119,7 @@
         </style>
 
         <div class="updating-box">
-            <div class="updating-icon">
-                <i class="fa-solid fa-screwdriver-wrench"></i>
-            </div>
+            
 
             <span class="updating-subtitle">Website Hạnh Cường</span>
 

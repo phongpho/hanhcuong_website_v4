@@ -1,3 +1,7 @@
+<?php
+require_once __DIR__ . '/language.php';
+?>
+
 <header class="header">
 
     <div class="top-bar">
@@ -28,8 +32,25 @@
                     phoquocduyvn@gmail.com
                 </span>
             </div>
+
+
             <div class="top-bar-right">
-                <span class="follow-label">Theo dõi chúng tôi:</span>
+                <!-- nút chuyển đổi ngôn ngữ -->
+                <div class="language-switch">
+                    <a href="?lang=vi" class="<?= $langCode === 'vi' ? 'active' : '' ?>">
+                        <img src="assets/images/flag-vn.svg" alt="VI">
+                        <span>VI</span>
+                    </a>
+
+                    <span class="divider">|</span>
+
+                    <a href="?lang=en" class="<?= $langCode === 'en' ? 'active' : '' ?>">
+                        <img src="assets/images/flag-us.svg" alt="EN">
+                        <span>EN</span>
+                    </a>
+                </div>
+
+                <span class="follow-label"><?= $lang['follow-us'] ?>:</span>
                 <a href="#" class="top-social">
                     <svg viewBox="0 0 24 24">
                         <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z" />
@@ -51,7 +72,7 @@
             <a href="index.php" class="logo">
                 <img src="assets/images/logo.png" alt="Logo Hạnh Cường">
                 <div class="logo-name">
-                    <strong>HẠNH CƯỜNG</strong>
+                    <strong><?= $lang['hanhcuong'] ?></strong>
                 </div>
             </a>
 
@@ -61,32 +82,34 @@
 
             <ul class="nav-menu">
 
-                
-                <li><a href="index.php">Trang chủ</a></li>
-                <li><a href="gioi-thieu.php">Giới thiệu</a></li>
+                <li><a href="index.php"><?= $lang['home'] ?></a></li>
 
+                <li><a href="gioi-thieu.php"><?= $lang['about'] ?></a></li>
 
                 <li class="nav-item dropdown">
-                    <a href="linh-vuc.php">Lĩnh vực</a>
+                    <a href="linh-vuc.php"><?= $lang['fields'] ?></a>
 
                     <ul class="dropdown-menu">
-                        <li><a href="chan-nuoi-bo.php">Chăn nuôi bò</a></li>
-                        <li><a href="chan-nuoi-de.php">Chăn nuôi dê</a></li>
-                        <li><a href="chan-nuoi-ca-tra.php">Cá tra xuất khẩu</a></li>
+                        <li><a href="chan-nuoi-bo.php"><?= $lang['cow_farming'] ?></a></li>
+                        <li><a href="chan-nuoi-de.php"><?= $lang['goat_farming'] ?></a></li>
+                        <li><a href="chan-nuoi-ca-tra.php"><?= $lang['pangasius_farming'] ?></a></li>
                     </ul>
                 </li>
 
-                
-                
-                <li><a href="lien-he.php">Liên hệ</a></li>
-                <li><a href="dang-cap-nhat.php">Thành tựu</a></li>
-                <li><a href="dang-cap-nhat.php">Tuyển dụng</a></li>
+                <li><a href="lien-he.php"><?= $lang['contact'] ?></a></li>
+
+                <li><a href="dang-cap-nhat.php"><?= $lang['achievements'] ?></a></li>
+
+                <li><a href="dang-cap-nhat.php"><?= $lang['recruitment'] ?></a></li>
+
             </ul>
 
+            
+
             <a href="#" class="btn-contact">
-                Liên hệ ngay
+                <?= $lang['contact-us-btn'] ?>
             </a>
         </nav>
     </div>
-    
+
 </header>

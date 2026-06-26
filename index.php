@@ -1,10 +1,11 @@
+<?php require_once 'includes/language.php'; ?>
 <!DOCTYPE html>
-<html lang="vi">
+<html lang="<?= $langCode ?>">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Công ty cổ phần nông nghiệp Hạnh Cường</title>
+    <title><?= $lang['page_title_index'] ?></title>
 
     <link
         href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&family=Fraunces:opsz,wght@9..144,700&family=Montserrat:wght@900&display=swap"
@@ -18,19 +19,17 @@
 <body>
     <?php include 'includes/navbar.php'; ?>
 
-    <!-- banner -->
     <section class="banner">
         <div class="banner-content">
-            <span class="welcome-label">Welcome to</span>
-            <h1>HẠNH CƯỜNG</h1>
+            <span class="welcome-label"><?= $lang['welcome_to'] ?></span>
+            <h1><?=$lang['hanhcuong']?></h1>
             <div class="title-divider"></div>
             <p>
-                Hệ sinh thái nông nghiệp quy mô lớn<br>tại An Giang
+                <?= $lang['banner_desc'] ?>
             </p>
         </div>
     </section>
 
-    <!-- giới thiệu sơ lược -->
     <section class="section">
         <div class="container" id="flexiable">
             <div class="img-side" data-aos="fade-up">
@@ -39,130 +38,98 @@
 
             <div class="content-side">
 
-                <small class="section-tag">GIỚI THIỆU</small>
+                <small class="section-tag"><?= $lang['intro_tag'] ?></small>
 
                 <h2>
-                    Công ty CP Nông nghiệp <span>HẠNH CƯỜNG</span>
+                    <?= $lang['intro_title_prefix'] ?> <span><?= $lang['hanhcuong'] ?></span> <?= $lang['intro_title_suffix'] ?>
                 </h2>
 
-                <p>
-                    Công ty Cổ phần Nông nghiệp Hạnh Cường tự hào là một trong những đơn vị tiên phong, đặt nền móng cho
-                    mô hình phát triển kinh tế bền vững trong lĩnh vực chăn nuôi đại gia súc và nuôi trồng thủy sản tại
-                    tỉnh An Giang. Kể từ khi chính thức thành lập vào năm 2018, với tầm nhìn chiến lược và khát vọng
-                    nâng tầm nông nghiệp Việt Nam, công ty đã không ngừng nỗ lực nới rộng quy mô sản xuất, xây dựng
-                    thành công một hệ sinh thái nông nghiệp tuần hoàn, khép kín và đồng bộ từ chuỗi thức ăn đầu vào cho
-                    đến sản phẩm đầu ra chất lượng cao.
+                <p><?= $lang['intro_p1'] ?></p>
 
-                </p>
-
-                <p>
-                    Sở hữu tiềm lực kinh tế vững vàng với tổng giá trị tài sản đạt khoảng 600 tỷ đồng, Hạnh Cường liên
-                    tục đầu tư mạnh mẽ vào hệ thống hạ tầng trang trại đạt chuẩn quốc tế, ứng dụng các giải pháp công
-                    nghệ cao hàng đầu vào quy trình chăn nuôi và kiểm soát nghiêm ngặt dịch bệnh. Chúng tôi luôn cam kết
-                    cung ứng nguồn thực phẩm sạch, an toàn tuyệt đối cho thị trường, đồng thời tối ưu hóa chuỗi giá trị
-                    nông nghiệp, bảo vệ môi trường sinh thái và đồng hành cùng sự phát triển thịnh vượng của cộng đồng
-                    địa phương.
-                </p>
+                <p><?= $lang['intro_p2'] ?></p>
             </div>
         </div>
     </section>
-
-    <!-- thông tin nổi bật  -->
 
     <section class="section data">
         <div class="container cards">
 
-            <div class="card feature-card" >
-                <h3>600 Con</h3>
-                <h4>Bò giống và bò thịt</h4>
-                <p>Bò giống chất lượng cao, đáp ứng nhu cầu thị trường ổn định.</p>
+            <div class="card feature-card">
+                <h3>600 <?= $lang['unit_heads'] ?></h3>
+                <h4><?= $lang['stat_cows_title'] ?></h4>
+                <p><?= $lang['stat_cows_desc'] ?></p>
             </div>
 
             <div class="card feature-card">
-                <h3>3.000 Con</h3>
-                <h4>Dê giống và dê thịt</h4>
-                <p>Quy mô chăn nuôi phát triển theo hướng an toàn và hiệu quả.</p>
+                <h3>3.000 <?= $lang['unit_heads'] ?></h3>
+                <h4><?= $lang['stat_goats_title'] ?></h4>
+                <p><?= $lang['stat_goats_desc'] ?></p>
             </div>
 
             <div class="card feature-card">
-                <h3>6.000 Tấn</h3>
-                <h4>Cá tra / năm</h4>
-                <p>Sản lượng ổn định, đáp ứng nhu cầu trong nước và xuất khẩu.</p>
+                <h3>6.000 <?= $lang['unit_tons'] ?></h3>
+                <h4><?= $lang['stat_fish_title'] ?></h4>
+                <p><?= $lang['stat_fish_desc'] ?></p>
             </div>
 
         </div>
     </section>
 
-    
-    <!-- thị trường -->
     <section class="section">
         <div class="section-title">
-            <span class="section-tag">MARKET NETWORK</span>
-            <h2>
-                Kết nối thị trường trong nước và quốc tế
-            </h2>
+            <span class="section-tag"><?= $lang['market_tag'] ?></span>
+            <h2><?= $lang['market_title'] ?></h2>
         </div>
 
         <div class="container target-market">
             <div class="target-market-content">
-                <h3>Xuất khẩu quốc tế</h3>
+                <h3><?= $lang['market_subtitle'] ?></h3>
                 <span>
                     HẠNH CƯỜNG
                 </span>
-                <p> Không chỉ đáp ứng nhu cầu của thị trường trong nước, Công ty Cổ phần Nông nghiệp Hạnh Cường còn từng
-                    bước mở rộng hoạt động xuất khẩu, đưa các sản phẩm chăn nuôi và thủy sản chất lượng cao đến với thị
-                    trường quốc tế, đặc biệt là khu vực Đông Nam Á.
-                </p>
+                <p><?= $lang['market_desc'] ?></p>
 
-                <a href="#" class="explore-btn">Khám phá thêm</a>
+                <a href="#" class="explore-btn"><?= $lang['explore_btn'] ?></a>
             </div>
         </div>
     </section>
-    
 
-
-    
-
-    <!-- hình ảnh minh họa -->
     <section class="section">
         <div class="container">
 
             <div class="section-title">
-                <span class="section-tag">HÌNH ẢNH</span>
-                <h2>
-                    Hoạt động của HẠNH CƯỜNG
-                </h2>
-
+                <span class="section-tag"><?= $lang['gallery_tag'] ?></span>
+                <h2><?= $lang['gallery_title'] ?></h2>
             </div>
 
-            <div class="activity-cards" >
+            <div class="activity-cards">
 
                 <div class="activity-card" data-aos="fade-up" data-aos-delay="100">
                     <div class="activity-img">
                         <img src="assets/images/chan-nuoi-bo.jpg" alt="Xuất khẩu bò">
                     </div>
-                    <h3>XUẤT KHẨU LÔ BÒ THỊT CHẤT LƯỢNG CAO SANG ĐÔN...</h3>
+                    <h3><?= $lang['news_1'] ?></h3>
                 </div>
 
                 <div class="activity-card" data-aos="fade-up" data-aos-delay="200">
                     <div class="activity-img">
                         <img src="assets/images/chan-nuoi-de.jpg" alt="Trang trại dê An Giang">
                     </div>
-                    <h3>MÔ HÌNH TRANG TRẠI DÊ ĐẠT CHUẨN QUỐC TẾ TẠI A...</h3>
+                    <h3><?= $lang['news_2'] ?></h3>
                 </div>
 
                 <div class="activity-card" data-aos="fade-up" data-aos-delay="300">
                     <div class="activity-img">
                         <img src="assets/images/chan-nuoi-ca-tra.jpg" alt="Thu hoạch cá tra">
                     </div>
-                    <h3>QUY TRÌNH THU HOẠCH CÁ TRA XUẤT KHẨU KHÉP KÍ...</h3>
+                    <h3><?= $lang['news_3'] ?></h3>
                 </div>
 
                 <div class="activity-card" data-aos="fade-up" data-aos-delay="400">
                     <div class="activity-img">
                         <img src="assets/images/chan-nuoi-bo.jpg" alt="Đối tác Đông Nam Á">
                     </div>
-                    <h3>HẠNH CƯỜNG KÝ KẾT ĐỐI TÁC CHIẾN LƯỢC TẠI ĐÔN...</h3>
+                    <h3><?= $lang['news_4'] ?></h3>
                 </div>
 
             </div>
