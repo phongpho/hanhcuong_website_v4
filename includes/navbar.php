@@ -81,29 +81,43 @@ require_once __DIR__ . '/language.php';
             </button>
 
             <ul class="nav-menu">
+                
+                <li class="mobile-menu-header">
+                    <img src="assets/images/logo.png" alt="Logo Hạnh Cường"> 
+                    <h2><?= $lang['hanhcuong'] ?></h2>
+                </li>
 
                 <li><a href="index.php"><?= $lang['home'] ?></a></li>
-
                 <li><a href="gioi-thieu.php"><?= $lang['about'] ?></a></li>
-
                 <li class="nav-item dropdown">
                     <div class="nav-link-group">
                         <a href="linh-vuc.php"><?= $lang['fields'] ?></a>
                         <span class="dropdown-toggle-icon"><i class="fa-solid fa-angle-down"></i></span>
                     </div>
-
                     <ul class="dropdown-menu">
                         <li><a href="chan-nuoi-bo.php"><?= $lang['cow_farming'] ?></a></li>
                         <li><a href="chan-nuoi-de.php"><?= $lang['goat_farming'] ?></a></li>
                         <li><a href="chan-nuoi-ca-tra.php"><?= $lang['pangasius_farming'] ?></a></li>
                     </ul>
                 </li>
-
                 <li><a href="lien-he.php"><?= $lang['contact'] ?></a></li>
-
                 <li><a href="dang-cap-nhat.php"><?= $lang['achievements'] ?></a></li>
-
                 <li><a href="dang-cap-nhat.php"><?= $lang['recruitment'] ?></a></li>
+
+                <li class="mobile-menu-footer">
+                    <div class="info-item">
+                        <i class="fa-solid fa-location-dot"></i> 
+                        <span><?= $lang['address_content'] ?></span>
+                    </div>
+                    <div class="info-item">
+                        <i class="fa-solid fa-phone"></i> 
+                        <span>0939 66 00 04</span>
+                    </div>
+                    <div class="info-item">
+                        <i class="fa-solid fa-envelope"></i> 
+                        <span>phoquocduyvn@gmail.com</span>
+                    </div>
+                </li>
 
             </ul>
 

@@ -241,6 +241,8 @@ h2 span{
         grid-template-columns: repeat(2, 1fr); /* 2 ảnh 1 hàng cho tablet/mobile lớn */
         gap: 16px;
     }
+
+  
 }
 @media screen and (max-width: 480px) {
     .activity-cards {
