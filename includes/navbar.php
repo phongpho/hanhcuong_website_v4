@@ -87,7 +87,10 @@ require_once __DIR__ . '/language.php';
                 <li><a href="gioi-thieu.php"><?= $lang['about'] ?></a></li>
 
                 <li class="nav-item dropdown">
-                    <a href="linh-vuc.php"><?= $lang['fields'] ?></a>
+                    <div class="nav-link-group">
+                        <a href="linh-vuc.php"><?= $lang['fields'] ?></a>
+                        <span class="dropdown-toggle-icon"><i class="fa-solid fa-angle-down"></i></span>
+                    </div>
 
                     <ul class="dropdown-menu">
                         <li><a href="chan-nuoi-bo.php"><?= $lang['cow_farming'] ?></a></li>
@@ -106,7 +109,10 @@ require_once __DIR__ . '/language.php';
 
             
 
-            <a href="#" class="btn-contact">
+            <a href="tel:0939660004" class="btn-contact btn-contact-mobile">
+                <?= $lang['contact-us-btn'] ?>
+            </a>
+            <a href="https://zalo.me/0939660004" target="_blank" rel="noopener noreferrer" class="btn-contact btn-contact-desktop">
                 <?= $lang['contact-us-btn'] ?>
             </a>
         </nav>

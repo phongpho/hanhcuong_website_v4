@@ -2,7 +2,7 @@
 
 return [
     'hanhcuong' => 'HẠNH CƯỜNG',
-    'contact-us-btn' => 'liên hệ ngay',
+    'contact-us-btn' => 'liên hệ',
     'follow-us' => 'Theo dõi chúng tôi',
     // ... (Giữ nguyên các từ khóa cũ của navbar và footer)
     'home' => 'Trang chủ',

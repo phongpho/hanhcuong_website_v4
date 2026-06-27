@@ -305,7 +305,7 @@ p{
 .btn-contact {
     display: flex;
     align-items: center;
-    gap: var(--space-2);
+    gap: var(--space-1);
     padding: 9px 20px;
     background: var(--color-primary);
     color: white;
@@ -315,6 +315,14 @@ p{
     letter-spacing: 0.2px;
     transition: background-color var(--transition-fast), transform var(--transition-fast);
     margin-left: 0;
+}
+
+.btn-contact-mobile {
+    display: none;
+}
+
+.btn-contact-desktop {
+    display: flex;
 }
 
 .btn-contact:hover {
@@ -405,6 +413,11 @@ p{
     color:white;
     background-color: var(--color-secondary);
 }   
+
+.mobile-menu-header, 
+.mobile-menu-footer {
+    display: none;
+}
 
 /* =========================================
    FOOTER
@@ -565,6 +578,10 @@ p{
     padding: 0 20px;
 }
 
+.dropdown-toggle-icon {
+    display: none;
+}
+
 @media screen and (max-width: 768px) {
     .top-bar-left {
         display: none;
@@ -577,9 +594,51 @@ p{
         justify-content: flex-end;
     }
 
-    .btn-contact {
+    .btn-contact-mobile {
+        display: flex;
+        white-space: nowrap; /* QUAN TRỌNG: Ngăn chặn chữ bên trong nút bị rớt xuống dòng */
+        padding: 8px 14px; /* Thu gọn padding của nút trên mobile */
+        font-size: 0.75rem; /* Chỉnh chữ nhỏ lại một xíu cho cân đối */
+        flex-shrink: 0;
+    }
+
+    .nav-link-group {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        border-bottom: 1px solid var(--color-border);
+    }
+    .nav-link-group a {
+        flex-grow: 1; /* Cho link chiếm hết phần không gian chữ */
+        border-bottom: none !important; /* Xóa border cũ của thẻ a */
+        text-align: left !important;
+        padding: 15px 20px !important; /* Chỉnh lại vùng bấm cho dễ chạm */
+    }
+    .dropdown-toggle-icon {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 50px; /* Vùng bấm đủ to cho ngón tay */
+        height: 50px;
+        cursor: pointer;
+        color: var(--color-text-muted);
+        border-left: 1px solid var(--color-border); /* Đường kẻ phân cách */
+    }
+
+    .dropdown-toggle-icon:active {
+        background-color: var(--color-bg-muted);
+    }
+
+    /* Hiệu ứng xoay mũi tên khi mở menu con */
+    .dropdown-toggle-icon i {
+        transition: transform var(--transition-fast);
+    }
+    .nav-item.dropdown-open .dropdown-toggle-icon i {
+        transform: rotate(180deg);
+    }
+
+    .btn-contact-desktop {
         display: none;
-        margin-left: 0 !important;
     }
 
     .menu-toggle {
@@ -590,6 +649,7 @@ p{
         color: var(--color-primary);
         cursor: pointer;
         z-index: 1001;
+        margin-right: 0;
 
     }
 
@@ -599,6 +659,7 @@ p{
         align-items: center;
         justify-content: space-between;
         position: relative;
+        gap: 8px;
     }
 
     .nav-menu {
@@ -648,13 +709,24 @@ p{
 
     .nav-item.dropdown-open .dropdown-menu {
         visibility: visible;
-        max-height: 200px;
+        max-height: 600px;
     }
 
     .dropdown-menu li a {
         padding: 12px 15px 12px 30px;
         font-size: 0.82rem;
         border-bottom: 1px solid var(--color-border);
+    }
+    .logo {
+        gap: 8px; /* Giảm nhẹ khoảng cách giữa icon logo và chữ HẠNH CƯỜNG */
+    }
+
+    .logo img {
+        height: 38px; /* Thu nhỏ icon logo một chút trên mobile */
+    }
+
+    .logo-name strong {
+        font-size: 1.05rem; /* Thu nhỏ tên thương hiệu để giải phóng không gian ngang */
     }
 
     .footer-grid {
