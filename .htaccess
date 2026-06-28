@@ -1,5 +1,6 @@
 RewriteEngine On
-RewriteBase /HanhCuong-v4/
+# Đổi từ /HanhCuong-v4/ thành / vì trên Render code nằm ở thư mục gốc
+RewriteBase /
 
 # Nếu là file hoặc thư mục thật thì không rewrite
 RewriteCond %{REQUEST_FILENAME} -f [OR]
