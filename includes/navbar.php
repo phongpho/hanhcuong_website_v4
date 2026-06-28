@@ -8,24 +8,21 @@ require_once __DIR__ . '/language.php';
         <div class="top-bar-inner">
             <div class="top-bar-left">
                 <span>
-                    <svg width="12" height="12" fill="none" stroke="rgba(255,255,255,0.75)" stroke-width="2"
-                        viewBox="0 0 24 24">
+                    <svg viewBox="0 0 24 24">
                         <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z" />
                         <circle cx="12" cy="9" r="2.5" />
                     </svg>
                     <strong>An Giang</strong>, Việt Nam
                 </span>
                 <span>
-                    <svg width="12" height="12" fill="none" stroke="rgba(255,255,255,0.75)" stroke-width="2"
-                        viewBox="0 0 24 24">
+                    <svg viewBox="0 0 24 24">
                         <path
                             d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 10.8 19.79 19.79 0 012 2.18 2 2 0 014 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16z" />
                     </svg>
                     0939 660 004
                 </span>
                 <span>
-                    <svg width="12" height="12" fill="none" stroke="rgba(255,255,255,0.75)" stroke-width="2"
-                        viewBox="0 0 24 24">
+                    <svg viewBox="0 0 24 24">
                         <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
                         <polyline points="22,6 12,13 2,6" />
                     </svg>
@@ -69,7 +66,7 @@ require_once __DIR__ . '/language.php';
 
     <div class="container-nav">
         <nav class="navbar">
-            <a href="index.php" class="logo">
+            <a href="index" class="logo">
                 <img src="assets/images/logo.png" alt="Logo Hạnh Cường">
                 <div class="logo-name">
                     <strong><?= $lang['hanhcuong'] ?></strong>
@@ -87,22 +84,22 @@ require_once __DIR__ . '/language.php';
                     <h2><?= $lang['hanhcuong'] ?></h2>
                 </li>
 
-                <li><a href="index.php"><?= $lang['home'] ?></a></li>
-                <li><a href="gioi-thieu.php"><?= $lang['about'] ?></a></li>
+                <li><a href="index"><?= $lang['home'] ?></a></li>
+                <li><a href="gioi-thieu"><?= $lang['about'] ?></a></li>
                 <li class="nav-item dropdown">
                     <div class="nav-link-group">
-                        <a href="linh-vuc.php"><?= $lang['fields'] ?></a>
+                        <a href="linh-vuc"><?= $lang['fields'] ?></a>
                         <span class="dropdown-toggle-icon"><i class="fa-solid fa-angle-down"></i></span>
                     </div>
                     <ul class="dropdown-menu">
-                        <li><a href="chan-nuoi-bo.php"><?= $lang['cow_farming'] ?></a></li>
-                        <li><a href="chan-nuoi-de.php"><?= $lang['goat_farming'] ?></a></li>
-                        <li><a href="chan-nuoi-ca-tra.php"><?= $lang['pangasius_farming'] ?></a></li>
+                        <li><a href="chan-nuoi-bo"><?= $lang['cow_farming'] ?></a></li>
+                        <li><a href="chan-nuoi-de"><?= $lang['goat_farming'] ?></a></li>
+                        <li><a href="chan-nuoi-ca-tra"><?= $lang['pangasius_farming'] ?></a></li>
                     </ul>
                 </li>
-                <li><a href="lien-he.php"><?= $lang['contact'] ?></a></li>
-                <li><a href="dang-cap-nhat.php"><?= $lang['achievements'] ?></a></li>
-                <li><a href="dang-cap-nhat.php"><?= $lang['recruitment'] ?></a></li>
+                <li><a href="lien-he"><?= $lang['contact'] ?></a></li>
+                <li><a href="dang-cap-nhat"><?= $lang['achievements'] ?></a></li>
+                <li><a href="dang-cap-nhat"><?= $lang['recruitment'] ?></a></li>
 
                 <li class="mobile-menu-footer">
                     <div class="info-item">

@@ -1,0 +1,14 @@
+RewriteEngine On
+RewriteBase /HanhCuong-v4/
+
+# Nếu là file hoặc thư mục thật thì không rewrite
+RewriteCond %{REQUEST_FILENAME} -f [OR]
+RewriteCond %{REQUEST_FILENAME} -d
+RewriteRule ^ - [L]
+
+# Bỏ đuôi .php
+RewriteCond %{REQUEST_FILENAME}.php -f
+RewriteRule ^([^/]+)/?$ $1.php [L,QSA]
+
+# Trang chủ
+RewriteRule ^$ index.php [L]

@@ -10,6 +10,7 @@ return [
     'about' => 'About',
     'fields' => 'Business Areas',
     'contact' => 'Contact',
+    'contact_desc' => 'Contact us for detailed advice and support',
     'achievements' => 'Achievements',
     'recruitment' => 'Careers',
     'contact_now' => 'Contact Now',

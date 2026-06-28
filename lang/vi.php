@@ -9,6 +9,7 @@ return [
     'about' => 'Giới thiệu',
     'fields' => 'Lĩnh vực',
     'contact' => 'Liên hệ',
+    'contact_desc' => 'Liên hệ với chúng tôi để được tư vấn và hỗ trợ chi tiết',
     'achievements' => 'Thành tựu',
     'recruitment' => 'Tuyển dụng',
     'contact_now' => 'Liên hệ ngay',

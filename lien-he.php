@@ -25,7 +25,8 @@
     
 
     <?php include 'includes/footer.php'; ?>
-
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script src="assets/js/script.js"></script>
 </body>
 
 </html>

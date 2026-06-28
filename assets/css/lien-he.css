@@ -11,6 +11,24 @@
     margin-top: 120px;
     background-size: contain;
 }
+@media (max-width: 767px) {
+    .contact {
+        /* 1. Đổi sang đường dẫn ảnh mới đã chia làm 2 block Trên/Dưới */
+        background-image: url(../images/lien-he-hop-tac-mobile.png); 
+        
+        /* 2. Ép ảnh luôn bung full 100% chiều ngang màn hình */
+        background-size: 100% auto;
+        background-position: top center;
+        
+        /* 3. Đổi chiều cao thành auto và dùng padding để tạo khung thụt lề cho ảnh tự giãn theo tỷ lệ */
+        height: auto;
+        min-height: unset;
+        /* Tỷ lệ ảnh mới khoảng 9:16 (dọc), dùng padding-top để giữ khung hình không bị méo */
+        padding-top: 175%; 
+        
+        margin-top: 120px; /* Căn chỉnh khoảng cách với Navbar mobile */
+    }
+}
 
 
 

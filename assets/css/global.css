@@ -168,6 +168,14 @@ p{
     color: #fff;
 }
 
+.top-bar-left svg {
+    width: 12px;
+    height: 12px;
+    fill: none;
+    stroke: rgba(255, 255, 255, 0.75);
+    stroke-width: 2;
+}
+
 .top-bar-right {
     display: flex;
     gap: var(--space-3); /* Chuẩn 12px */
@@ -523,6 +531,14 @@ p{
     line-height: 1.5;
 }
 
+.footer-contact svg {
+    width: 18px;
+    height: 18px;
+    fill: none;
+    stroke: var(--color-secondary);
+    stroke-width: 2;
+}
+
 .footer-contact li svg {
     flex-shrink: 0;
     margin-top: 3px;
@@ -582,7 +598,122 @@ p{
     display: none;
 }
 
+
+.banner {
+    position: relative;
+    height: 100vh; /* Đã sửa thành 100vh theo yêu cầu comment của bạn */
+    min-height: 600px;
+    background: url(../images/background-banner-2.jpg) no-repeat center/cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: visible;
+}
+
+.banner-content .welcome-label {
+    font-family: 'Dancing Script', cursive;
+    font-size: 2rem;
+    font-weight: 600;
+    color: rgba(255, 255, 255, 0.85);
+    letter-spacing: 2px;
+    display: block;
+    margin-bottom: var(--space-1);
+}
+
+.banner-content {
+    text-align: center;
+    color: white;
+    z-index: 1;
+}
+
+.banner-content h1 {
+    /* font-family: 'Fraunces', Georgia, serif; */
+    font-size: 4rem;
+    font-weight: 900;
+    color: #ffffff;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    line-height: 1;
+}
+
+.banner-content p {
+    font-family: 'Fraunces', serif;
+    font-size: 1rem;
+    color: rgba(255, 255, 255, 0.75);
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.banner::after {
+    content: '';
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    width: 100%;
+    height: 350px;
+    background: var(--color-bg); /* Tránh lỗi khi trang web đổi màu nền chủ đạo */
+    -webkit-mask: url(../images/torn-edge.png) bottom/100% 100% no-repeat;
+    mask: url(../images/torn-edge.png) bottom/100% 100% no-repeat;
+    pointer-events: none;
+    z-index: 2;
+}
+
+.title-divider {
+    width: 60px;
+    height: 2px;
+    background: var(--color-secondary);
+    margin: var(--space-3) auto;
+}
+/* giới thiệu sơ lược */
+.content-side,
+.img-side {
+    flex: 1;
+}
+.img-side {
+    display: flex;
+}
+
+.img-side img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+h2 span{
+    font-size: 2.5rem;
+    color: var(--color-primary);
+}
+.first-sec{
+    margin-top: 140px;
+}
+.explore-btn {
+    display: inline-block;
+    padding: 14px 28px;
+
+    background: white;
+    color: var(--color-primary);
+
+    font-weight: 600;
+    text-decoration: none;
+
+    border-radius: 999px;
+
+    transition: all 0.25s ease;
+}
+
 @media screen and (max-width: 768px) {
+
+    p {
+        text-align: left;
+    }
+
+    .section-title h2 {
+        font-size: 1.8rem;
+        letter-spacing: 0.5px;
+        margin-bottom: 12px;
+    }
 
     .top-bar-left {
         display: none;
@@ -790,13 +921,7 @@ p{
         object-fit: contain;
     }
         
-    /* Nếu bạn dùng thẻ <img> thay vì icon, hãy bật đoạn CSS này lên:
-    .mobile-menu-header img {
-        width: 80px;
-        height: auto;
-        margin-bottom: 15px;
-    }
-    */
+
 
     .mobile-menu-header h2 {
         font-family: 'Montserrat', sans-serif;
@@ -843,219 +968,12 @@ p{
         text-align: center;
     }
 
-    /* index */
-    /* =========================================
-       INDEX RESPONSIVE (Dán tiếp vào đây)
-    ========================================= */
     
-    /* 1. Banner */
-    .banner {
-        min-height: 200px;
-        height: 600px;
-    }
-    .banner-content h1 {
-        font-size: 2.5rem;
-        letter-spacing: 2px;
-    }
-    .banner-content .welcome-label {
-        font-size: 1.5rem;
-    }
-    .banner-content p {
-        font-size: 0.85rem;
-        margin-bottom: 20px;
-    }
-    .banner::after {
-        height: 150px; /* Giảm chiều cao viền rách để không lẹm vào text */
-    }
+}
 
-    /* 2. Giới thiệu sơ lược */
-    .section-title {
-        margin-bottom: 40px;
-    }
-    .section-title h2, h2 {
-        font-size: 1.6rem;
-    }
-    h2 span {
-        font-size: 1.8rem;
-    }
-    #flexiable {
-        flex-direction: column; /* Chuyển từ ngang sang dọc */
-        gap: 24px;
-    }
-    .img-side img {
-        max-height: 300px; /* Giới hạn chiều cao ảnh trên mobile */
-        border-radius: 12px; /* Thêm chút bo góc cho hình ảnh mượt mà hơn */
-    }
-
-    /* 3. Thông tin nổi bật (Data) */
-    .cards {
-        grid-template-columns: 1fr; /* 1 cột thay vì 3 cột */
-        gap: 20px;
-    }
-    .feature-card h3 {
-        font-size: 2.2rem;
-    }
-
-    /* 4. Thị trường (Target Market) */
-    .target-market {
-        height: auto;
-        min-height: unset;
-        padding: 60px 20px 80px 20px;
-        border-radius: 40px 40px 0 0; /* Bo góc nhẹ lại cho mobile */
-        justify-content: center;
-        background-position: left center; /* Điều chỉnh focus của hình nền */
-    }
-    .target-market-content {
-        margin-top: 0;
-        text-align: center; /* Căn giữa nội dung */
-    }
-    .target-market-content span {
+@media screen and (max-width: 480px) {
+    .section-title h2 {
         font-size: 2rem;
+        letter-spacing: 0.3px;
     }
-    .target-market {
-        height: auto !important;
-        min-height: unset !important;
-        padding: 50px 20px 60px 20px !important; 
-        border-radius: 30px 30px 0 0 !important; /* Giảm độ bo góc cho vừa mắt trên mobile */
-        background-position: 70% center !important; /* Dịch bản đồ sang phải một chút để lộ rõ hướng mũi tên */
-    }
-
-    .target-market-content {
-        margin-top: 0 !important;
-        max-width: 100%;
-        
-        /* Tạo khung kính mờ (Glassmorphism) để bảo vệ chữ */
-        background: rgba(27, 94, 32, 0.85); /* Dùng màu xanh đậm (primary-hover) với 85% độ trong suốt */
-        padding: 24px 20px;
-        border-radius: 16px;
-        backdrop-filter: blur(5px); /* Làm mờ nhẹ phần bản đồ lọt vào sau khung chữ */
-        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15); /* Đổ bóng để khối chữ nổi hẳn lên */
-        
-        text-align: center; /* Căn giữa nút bấm và tiêu đề */
-    }
-
-    .target-market-content h3 {
-        font-size: 1.1rem;
-    }
-
-    .target-market-content span {
-        font-size: 2rem;
-    }
-
-    .target-market-content p {
-        text-align: left !important; /* Hủy justify, căn trái đoạn văn để chữ đọc mượt mà hơn */
-        margin-bottom: 24px;
-        color: #ffffff !important;
-        font-size: 0.95rem;
-        line-height: 1.6;
-    }
-
-    /* 5. Hình ảnh minh họa */
-    .activity-cards {
-        grid-template-columns: repeat(2, 1fr); /* 2 ảnh 1 hàng cho tablet/mobile lớn */
-        gap: 16px;
-    }
-}
-.banner {
-    position: relative;
-    height: 100vh; /* Đã sửa thành 100vh theo yêu cầu comment của bạn */
-    min-height: 600px;
-    background: url(../images/background-banner-2.jpg) no-repeat center/cover;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    overflow: visible;
-}
-
-.banner-content .welcome-label {
-    font-family: 'Dancing Script', cursive;
-    font-size: 2rem;
-    font-weight: 600;
-    color: rgba(255, 255, 255, 0.85);
-    letter-spacing: 2px;
-    display: block;
-    margin-bottom: var(--space-1);
-}
-
-.banner-content {
-    text-align: center;
-    color: white;
-    z-index: 1;
-}
-
-.banner-content h1 {
-    /* font-family: 'Fraunces', Georgia, serif; */
-    font-size: 4rem;
-    font-weight: 900;
-    color: #ffffff;
-    letter-spacing: 4px;
-    text-transform: uppercase;
-    line-height: 1;
-}
-
-.banner-content p {
-    font-family: 'Fraunces', serif;
-    font-size: 1rem;
-    color: rgba(255, 255, 255, 0.75);
-    letter-spacing: 3px;
-    text-transform: uppercase;
-    margin-bottom: 40px;
-    text-align: center;
-}
-
-.banner::after {
-    content: '';
-    position: absolute;
-    bottom: -1px;
-    left: 0;
-    width: 100%;
-    height: 350px;
-    background: var(--color-bg); /* Tránh lỗi khi trang web đổi màu nền chủ đạo */
-    -webkit-mask: url(../images/torn-edge.png) bottom/100% 100% no-repeat;
-    mask: url(../images/torn-edge.png) bottom/100% 100% no-repeat;
-    pointer-events: none;
-    z-index: 2;
-}
-
-.title-divider {
-    width: 60px;
-    height: 2px;
-    background: var(--color-secondary);
-    margin: var(--space-3) auto;
-}
-/* giới thiệu sơ lược */
-.content-side,
-.img-side {
-    flex: 1;
-}
-.img-side {
-    display: flex;
-}
-
-.img-side img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
-}
-h2 span{
-    font-size: 2.5rem;
-    color: var(--color-primary);
-}
-.first-sec{
-    margin-top: 140px;
-}
-.explore-btn {
-    display: inline-block;
-    padding: 14px 28px;
-
-    background: white;
-    color: var(--color-primary);
-
-    font-weight: 600;
-    text-decoration: none;
-
-    border-radius: 999px;
-
-    transition: all 0.25s ease;
 }

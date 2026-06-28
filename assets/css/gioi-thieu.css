@@ -48,3 +48,49 @@ p span{
     background-color: var(--color-primary);
     border-radius: 50%;
 }
+
+/* =========================================
+   RESPONSIVE MOBILE
+========================================= */
+@media screen and (max-width: 768px) {
+    .img-side {
+        flex: none;
+        width: 100%;
+    }
+
+    .content-side {
+        flex: none;
+        width: 100%;
+    }
+
+    #flexiable {
+        flex-direction: column;
+        gap: 24px;
+    }
+
+    .content-list li {
+        text-align: left;
+    }
+
+    .first-sec {
+        margin-top: 80px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    #flexiable {
+        gap: 16px;
+    }
+
+    .content-list li {
+        padding-left: 20px;
+        font-size: 0.95rem;
+        margin-bottom: 12px;
+    }
+
+    .content-list li::before {
+        top: 8px;
+        width: 6px;
+        height: 6px;
+    }
+}
